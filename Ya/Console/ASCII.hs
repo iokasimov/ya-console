@@ -87,10 +87,10 @@ ascii_to_char :: ASCII -> Char
 ascii_to_char = is
   `li` lower_latin_to_char
   `la` upper_latin_to_char
- `la_` digit_to_char
- `la_` bracket_to_char
-  `la` punctuation_to_char
- `la_` caret_to_char
+ `la_` digit_to_char `ha'he` is
+ `la_` bracket_to_char `ha'he` is
+  `la` punctuation_to_char `ha'he` is
+ `la_` caret_to_char `ha'he` is
 
 char_to_ascii :: Char -> ASCII
 char_to_ascii = \case
@@ -100,8 +100,8 @@ char_to_ascii = \case
 	'\ESC' -> Caret Escape
 	'\SP' -> Caret Space
 	'\DEL' -> Caret Delete
-	'/' -> Glyph `ha` Symbol `ha` Punctuate `ha` Back `ha` Slash `he` ()
-	'\\' -> Glyph `ha` Symbol `ha` Punctuate `ha` Slash `he` ()
+	'/' -> Glyph `ha` Symbol `ha` Punctuate `ha` Back `ha` Slash `hv` ()
+	'\\' -> Glyph `ha` Symbol `ha` Punctuate `ha` Slash `hv` ()
 	'(' -> Glyph `ha` Symbol `ha` Bracket `ha` Opened `li` Round
 	')' -> Glyph `ha` Symbol `ha` Bracket `ha` Closed `li` Round
 	'{' -> Glyph `ha` Symbol `ha` Bracket `ha` Opened `li` Curly
@@ -110,27 +110,27 @@ char_to_ascii = \case
 	'>' -> Glyph `ha` Symbol `ha` Bracket `ha` Closed `li` Angle
 	'[' -> Glyph `ha` Symbol `ha` Bracket `ha` Opened `li` Square
 	']' -> Glyph `ha` Symbol `ha` Bracket `ha` Closed `li` Square
-	'"' -> Glyph `ha` Symbol `ha` Punctuate `ha` Doublequote `he` ()
-	'\'' -> Glyph `ha` Symbol `ha` Punctuate `ha` Singlequote `he` ()
-	'.' -> Glyph `ha` Symbol `ha` Punctuate `ha` Period `he` ()
-	',' -> Glyph `ha` Symbol `ha` Punctuate `ha` Comma `he` ()
-	';' -> Glyph `ha` Symbol `ha` Punctuate `ha` Semicolon `he` ()
-	':' -> Glyph `ha` Symbol `ha` Punctuate `ha` Colon `he` ()
-	'!' -> Glyph `ha` Symbol `ha` Punctuate `ha` Exclam `he` ()
-	'?' -> Glyph `ha` Symbol `ha` Punctuate `ha` Question `he` ()
-	'#' -> Glyph `ha` Symbol `ha` Punctuate `ha` Hash `he` ()
-	'$' -> Glyph `ha` Symbol `ha` Punctuate `ha` Dollar `he` ()
-	'%' -> Glyph `ha` Symbol `ha` Punctuate `ha` Percent `he` ()
-	'&' -> Glyph `ha` Symbol `ha` Punctuate `ha` Ampersand `he` ()
-	'*' -> Glyph `ha` Symbol `ha` Punctuate `ha` Asterisk `he` ()
-	'+' -> Glyph `ha` Symbol `ha` Punctuate `ha` Plus `he` ()
-	'-' -> Glyph `ha` Symbol `ha` Punctuate `ha` Hyphen `he` ()
-	'@' -> Glyph `ha` Symbol `ha` Punctuate `ha` At `he` ()
-	'^' -> Glyph `ha` Symbol `ha` Punctuate `ha` Circumflex `he` ()
-	'_' -> Glyph `ha` Symbol `ha` Punctuate `ha` Underscore `he` ()
-	'`' -> Glyph `ha` Symbol `ha` Punctuate `ha` Grave `he` ()
-	'|' -> Glyph `ha` Symbol `ha` Punctuate `ha` Bar `he` ()
-	'~' -> Glyph `ha` Symbol `ha` Punctuate `ha` Tilde `he` ()
+	'"' -> Glyph `ha` Symbol `ha` Punctuate `ha` Doublequote `hv` ()
+	'\'' -> Glyph `ha` Symbol `ha` Punctuate `ha` Singlequote `hv` ()
+	'.' -> Glyph `ha` Symbol `ha` Punctuate `ha` Period `hv` ()
+	',' -> Glyph `ha` Symbol `ha` Punctuate `ha` Comma `hv` ()
+	';' -> Glyph `ha` Symbol `ha` Punctuate `ha` Semicolon `hv` ()
+	':' -> Glyph `ha` Symbol `ha` Punctuate `ha` Colon `hv` ()
+	'!' -> Glyph `ha` Symbol `ha` Punctuate `ha` Exclam `hv` ()
+	'?' -> Glyph `ha` Symbol `ha` Punctuate `ha` Question `hv` ()
+	'#' -> Glyph `ha` Symbol `ha` Punctuate `ha` Hash `hv` ()
+	'$' -> Glyph `ha` Symbol `ha` Punctuate `ha` Dollar `hv` ()
+	'%' -> Glyph `ha` Symbol `ha` Punctuate `ha` Percent `hv` ()
+	'&' -> Glyph `ha` Symbol `ha` Punctuate `ha` Ampersand `hv` ()
+	'*' -> Glyph `ha` Symbol `ha` Punctuate `ha` Asterisk `hv` ()
+	'+' -> Glyph `ha` Symbol `ha` Punctuate `ha` Plus `hv` ()
+	'-' -> Glyph `ha` Symbol `ha` Punctuate `ha` Hyphen `hv` ()
+	'@' -> Glyph `ha` Symbol `ha` Punctuate `ha` At `hv` ()
+	'^' -> Glyph `ha` Symbol `ha` Punctuate `ha` Circumflex `hv` ()
+	'_' -> Glyph `ha` Symbol `ha` Punctuate `ha` Underscore `hv` ()
+	'`' -> Glyph `ha` Symbol `ha` Punctuate `ha` Grave `hv` ()
+	'|' -> Glyph `ha` Symbol `ha` Punctuate `ha` Bar `hv` ()
+	'~' -> Glyph `ha` Symbol `ha` Punctuate `ha` Tilde `hv` ()
 	'A' -> Glyph `ha` Letter `ha` Upper `li`A
 	'B' -> Glyph `ha` Letter `ha` Upper `li`B
 	'C' -> Glyph `ha` Letter `ha` Upper `li`C
@@ -183,22 +183,22 @@ char_to_ascii = \case
 	'x' -> Glyph `ha` Letter `ha` Lower `li`X
 	'y' -> Glyph `ha` Letter `ha` Lower `li`Y
 	'z' -> Glyph `ha` Letter `ha` Lower `li`Z
-	'0' -> Glyph `ha` Number `ha` Zero `he` ()
-	'1' -> Glyph `ha` Number `ha` One `he` ()
-	'2' -> Glyph `ha` Number `ha` Two `he` ()
-	'3' -> Glyph `ha` Number `ha` Three `he` ()
-	'4' -> Glyph `ha` Number `ha` Four `he` ()
-	'5' -> Glyph `ha` Number `ha` Five `he` ()
-	'6' -> Glyph `ha` Number `ha` Six `he` ()
-	'7' -> Glyph `ha` Number `ha` Seven `he` ()
-	'8' -> Glyph `ha` Number `ha` Eight `he` ()
-	'9' -> Glyph `ha` Number `ha` Nine `he` ()
+	'0' -> Glyph `ha` Number `ha` Zero `hv` ()
+	'1' -> Glyph `ha` Number `ha` One `hv` ()
+	'2' -> Glyph `ha` Number `ha` Two `hv` ()
+	'3' -> Glyph `ha` Number `ha` Three `hv` ()
+	'4' -> Glyph `ha` Number `ha` Four `hv` ()
+	'5' -> Glyph `ha` Number `ha` Five `hv` ()
+	'6' -> Glyph `ha` Number `ha` Six `hv` ()
+	'7' -> Glyph `ha` Number `ha` Seven `hv` ()
+	'8' -> Glyph `ha` Number `ha` Eight `hv` ()
+	'9' -> Glyph `ha` Number `ha` Nine `hv` ()
 	_ -> error "Not ASCII!"
 
 instance IsString (List Char) where
  fromString x = T'TT'I (Some (Construct (worker x))) where
-  worker (c : []) = Last c
-  worker (c : cs) = Next c (worker cs)
+  worker (c : []) = Item c `ha` Maybe `hv` Last
+  worker (c : cs) = Item c `ha` Maybe `hv` Next (worker cs)
 
 -- char_to_ascii_with_error :: Char -> ASCII
 -- char_to_ascii_with_error x =
@@ -208,21 +208,21 @@ instance IsString (List Char) where
 instance IsString (List ASCII) where
  fromString [] = T'TT'I (None Unit)
  fromString x = T'TT'I (Some (Construct (worker x))) where
-  worker (c : []) = Last (char_to_ascii c)
-  worker (c : cs) = Next (char_to_ascii c) (worker cs)
+  worker (c : []) = Item `hv` char_to_ascii c `ha` Maybe `hv` Last
+  worker (c : cs) = Item `hv` char_to_ascii c `ha` Maybe `ha` Next `hv` worker cs
 
 -- instance IsString (List Latin) where
 
 instance IsString (Construction Optional ASCII) where
  fromString x = Construct (worker x) where
-  worker (c : []) = Last (char_to_ascii c)
-  worker (c : cs) = Next (char_to_ascii c) (worker cs)
+  worker (c : []) = Item `hv` char_to_ascii c `ha` Maybe `hv` Last
+  worker (c : cs) = Item `hv` char_to_ascii c `ha` Maybe `ha` Next `hv` worker cs
 
 instance IsList (Construction Optional item) where
  type Item (Construction Optional item) = item
  fromList x = Construct (worker x) where
-  worker (c : []) = Last c
-  worker (c : cs) = Next c (worker cs)
+  worker (c : []) = Item c `ha` Maybe `hv` Last
+  worker (c : cs) = Item c `ha` Maybe `ha` Next `hv` worker cs
 
 -- instance IsList (Construction Optional item) where
  -- type Item (Construction Optional item) = item
