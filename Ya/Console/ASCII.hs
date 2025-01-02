@@ -2,8 +2,7 @@ module Ya.Console.ASCII where
 
 import Ya
 import Ya.ASCII
-
-import Ya.Console.Instances
+import Ya.World
 
 import "base" Data.Bool as Base (Bool (False))
 import "base" Data.Char (Char)
