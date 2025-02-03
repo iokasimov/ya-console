@@ -196,8 +196,8 @@ char_to_ascii = \case
 
 instance IsString (List Char) where
  fromString x = T'TT'I (Some (Construct (worker x))) where
-  worker (c : []) = Item c `ha` Maybe `hv` Last
-  worker (c : cs) = Item c `ha` Maybe `hv` Next (worker cs)
+  worker (c : []) = Item c `ha` Last `hv` Unit
+  worker (c : cs) = Item c `ha` Next `hv` worker cs
 
 -- char_to_ascii_with_error :: Char -> ASCII
 -- char_to_ascii_with_error x =
@@ -207,21 +207,21 @@ instance IsString (List Char) where
 instance IsString (List ASCII) where
  fromString [] = T'TT'I (None Unit)
  fromString x = T'TT'I (Some (Construct (worker x))) where
-  worker (c : []) = Item `hv` char_to_ascii c `ha` Maybe `hv` Last
-  worker (c : cs) = Item `hv` char_to_ascii c `ha` Maybe `ha` Next `hv` worker cs
+  worker (c : []) = Item `hv` char_to_ascii c `ha` Last `hv` Unit
+  worker (c : cs) = Item `hv` char_to_ascii c `ha` Next `hv` worker cs
 
 -- instance IsString (List Latin) where
 
 instance IsString (Construction Optional ASCII) where
  fromString x = Construct (worker x) where
-  worker (c : []) = Item `hv` char_to_ascii c `ha` Maybe `hv` Last
-  worker (c : cs) = Item `hv` char_to_ascii c `ha` Maybe `ha` Next `hv` worker cs
+  worker (c : []) = Item `hv` char_to_ascii c `ha` Last `hv` Unit
+  worker (c : cs) = Item `hv` char_to_ascii c `ha` Next `hv` worker cs
 
 instance IsList (Construction Optional item) where
  type Item (Construction Optional item) = item
  fromList x = Construct (worker x) where
-  worker (c : []) = Item c `ha` Maybe `hv` Last
-  worker (c : cs) = Item c `ha` Maybe `ha` Next `hv` worker cs
+  worker (c : []) = Item c `ha` Last `hv` Unit
+  worker (c : cs) = Item c `ha` Next `hv` worker cs
 
 -- instance IsList (Construction Optional item) where
  -- type Item (Construction Optional item) = item
