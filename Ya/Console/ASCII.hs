@@ -24,7 +24,7 @@ prepare = do
  hSetEcho stdin Base.False
  putStr "\ESC[?25l"
 
--- type Buffering = Block `ML` Line `ML` Char
+-- type Buffering = Block `S` Line `S` Char
 
 input :: IO ASCII
 input = getChar `yo` char_to_ascii
@@ -32,7 +32,7 @@ input = getChar `yo` char_to_ascii
 output :: ASCII -> IO ASCII
 output character = putChar `hv` ascii_to_char character `yu` character
 
-type Styled = Turn Unit `ML` Turn Unit `ML` Turn Unit `ML` Turn Unit `ML` Turn Unit
+type Styled = Turn Unit `S` Turn Unit `S` Turn Unit `S` Turn Unit `S` Turn Unit
 
 pattern Emphasize e = This (This (This (This e)))
 pattern Invisible e = This (This (This (That e)))
@@ -40,7 +40,7 @@ pattern Underline e = This (This (That e))
 pattern Blinking e = This (That e)
 pattern Crossing e = That e
 
-type Turn e = e `ML` e
+type Turn e = e `S` e
 
 pattern Off e = This e :: Turn e
 pattern On e = That e :: Turn e
