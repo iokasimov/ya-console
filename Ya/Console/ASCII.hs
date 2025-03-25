@@ -53,7 +53,7 @@ styled = putStr `ha____` is @Styled `ho___`  is
  `la_` is `hu`"\ESC[29m" `la` is `hu`"\ESC[9m"
 
 caret_to_char :: Caret -> Char
-caret_to_char = is `hu` '\BS' `la` is `hu` '\HT' `la` is `hu` '\LF' `la` is `hu` '\ESC' `la` is `hu` '\SP' `la` is `hu` '\DEL'
+caret_to_char = is `hu` '\HT' `la` is `hu` '\LF' `la` is `hu` '\ESC' `la` is `hu` '\BS' `la` is `hu` '\SP' `la` is `hu` '\DEL'
 
 bracket_to_char :: Bracket -> Char
 bracket_to_char = is `hu` '(' `la` is `hu` '{' `la` is `hu` '<' `la` is `hu` '['
@@ -93,13 +93,13 @@ ascii_to_char = is
 
 char_to_ascii :: Char -> ASCII
 char_to_ascii = \case
- '\BS' -> Caret `hv` by Backspace
+ '\BS' -> Caret `hv` by (Back `ha` Space)
  '\HT' -> Caret `hv` by Tab
  '\LF' -> Caret `hv` by Newline
  '\ESC' -> Caret `hv` by Escape
  '\SP' -> Caret `hv` by Space
  '\DEL' -> Caret `hv` by Delete
- '/' -> Glyph `ha` Symbol `ha` Punctuate `ha` Back `hv` by Slash
+ '/' -> Glyph `ha` Symbol `ha` Punctuate `hv` by (Back `ha` Slash)
  '\\' -> Glyph `ha` Symbol `ha` Punctuate `hv` by Slash
  '(' -> Glyph `ha` Symbol `ha` Bracket `ha` Opened `li` Round
  ')' -> Glyph `ha` Symbol `ha` Bracket `ha` Closed `li` Round
