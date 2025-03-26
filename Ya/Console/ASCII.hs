@@ -53,17 +53,17 @@ styled = putStr `ha____` is @Styled `ho___`  is
  `la_` is `hu`"\ESC[29m" `la` is `hu`"\ESC[9m"
 
 caret_to_char :: Caret -> Char
-caret_to_char = is `hu` '\HT' `la` is `hu` '\LF' `la` is `hu` '\ESC' `la` is `hu` '\BS' `la` is `hu` '\SP' `la` is `hu` '\DEL'
+caret_to_char = is `hu` '\HT' `la` is `hu` '\LF' `la` is `hu` '\ESC' `la` is `hu` '\BS' `la` is `hu` '\DEL'
 
 bracket_to_char :: Bracket -> Char
 bracket_to_char = is `hu` '(' `la` is `hu` '{' `la` is `hu` '<' `la` is `hu` '['
-            `la_` is `hu` ')' `la` is `hu` '}' `la` is `hu` '>' `la` is `hu` ']'
+              `la_` is `hu` ')' `la` is `hu` '}' `la` is `hu` '>' `la` is `hu` ']'
 
 punctuation_to_char :: Punctuate -> Char
 punctuation_to_char = is `hu` '\"' `la` is `hu` '\'' `la` is `hu` '#' `la` is `hu` '-' `la` is `hu` '@'
  `la` is `hu` '^' `la` is `hu` '_' `la` is `hu` '`' `la` is `hu` '|' `la` is `hu` '~'
  `la` is `hu` '+' `la` is `hu` '*' `la` is `hu` '%' `la` is `hu` '&' `la` is `hu` '$' `la` is `hu` '\\' `la` is `hu` '/'
- `la` is `hu` '.' `la` is `hu` ',' `la` is `hu` ';' `la` is `hu` ':' `la` is `hu` '!' `la` is `hu` '?'
+ `la` is `hu` '.' `la` is `hu` ',' `la` is `hu` ';' `la` is `hu` ':' `la` is `hu` '!' `la` is `hu` '?' `la` is `hu` ' '
 
 upper_latin_to_char :: Latin -> Char
 upper_latin_to_char = is `hu` 'A' `la` is `hu` 'B' `la` is `hu` 'C' `la` is `hu` 'D' `la` is `hu` 'E' `la` is `hu` 'F'
@@ -97,7 +97,7 @@ char_to_ascii = \case
  '\HT' -> Caret `hv` by Tab
  '\LF' -> Caret `hv` by Newline
  '\ESC' -> Caret `hv` by Escape
- '\SP' -> Caret `hv` by Space
+ ' ' -> Glyph `ha` Symbol `ha` Punctuate `hv` by Space
  '\DEL' -> Caret `hv` by Delete
  '/' -> Glyph `ha` Symbol `ha` Punctuate `hv` by (Back `ha` Slash)
  '\\' -> Glyph `ha` Symbol `ha` Punctuate `hv` by Slash
