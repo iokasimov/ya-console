@@ -130,58 +130,58 @@ char_to_ascii = \case
  '`' -> Glyph `ha` Symbol `ha` Punctuate `hv` by Grave
  '|' -> Glyph `ha` Symbol `ha` Punctuate `hv` by Bar
  '~' -> Glyph `ha` Symbol `ha` Punctuate `hv` by Tilde
- 'A' -> Glyph `ha` Letter `ha` Upper `hv` A
- 'B' -> Glyph `ha` Letter `ha` Upper `hv` B
- 'C' -> Glyph `ha` Letter `ha` Upper `hv` C
- 'D' -> Glyph `ha` Letter `ha` Upper `hv` D
- 'E' -> Glyph `ha` Letter `ha` Upper `hv` E
- 'F' -> Glyph `ha` Letter `ha` Upper `hv` F
- 'G' -> Glyph `ha` Letter `ha` Upper `hv` G
- 'H' -> Glyph `ha` Letter `ha` Upper `hv` H
- 'I' -> Glyph `ha` Letter `ha` Upper `hv` I
- 'J' -> Glyph `ha` Letter `ha` Upper `hv` J
- 'K' -> Glyph `ha` Letter `ha` Upper `hv` K
- 'L' -> Glyph `ha` Letter `ha` Upper `hv` L
- 'M' -> Glyph `ha` Letter `ha` Upper `hv` M
- 'N' -> Glyph `ha` Letter `ha` Upper `hv` N
- 'O' -> Glyph `ha` Letter `ha` Upper `hv` O
- 'P' -> Glyph `ha` Letter `ha` Upper `hv` P
- 'Q' -> Glyph `ha` Letter `ha` Upper `hv` Q
- 'R' -> Glyph `ha` Letter `ha` Upper `hv` R
- 'S' -> Glyph `ha` Letter `ha` Upper `hv` S
- 'T' -> Glyph `ha` Letter `ha` Upper `hv` T
- 'U' -> Glyph `ha` Letter `ha` Upper `hv` U
- 'V' -> Glyph `ha` Letter `ha` Upper `hv` V
- 'W' -> Glyph `ha` Letter `ha` Upper `hv` W
- 'X' -> Glyph `ha` Letter `ha` Upper `hv` X
- 'Y' -> Glyph `ha` Letter `ha` Upper `hv` Y
- 'Z' -> Glyph `ha` Letter `ha` Upper `hv` Z
- 'a' -> Glyph `ha` Letter `ha` Lower `hv` A
- 'b' -> Glyph `ha` Letter `ha` Lower `hv` B
- 'c' -> Glyph `ha` Letter `ha` Lower `hv` C
- 'd' -> Glyph `ha` Letter `ha` Lower `hv` D
- 'e' -> Glyph `ha` Letter `ha` Lower `hv` E
- 'f' -> Glyph `ha` Letter `ha` Lower `hv` F
- 'g' -> Glyph `ha` Letter `ha` Lower `hv` G
- 'h' -> Glyph `ha` Letter `ha` Lower `hv` H
- 'i' -> Glyph `ha` Letter `ha` Lower `hv` I
- 'j' -> Glyph `ha` Letter `ha` Lower `hv` J
- 'k' -> Glyph `ha` Letter `ha` Lower `hv` K
- 'l' -> Glyph `ha` Letter `ha` Lower `hv` L
- 'm' -> Glyph `ha` Letter `ha` Lower `hv` M
- 'n' -> Glyph `ha` Letter `ha` Lower `hv` N
- 'o' -> Glyph `ha` Letter `ha` Lower `hv` O
- 'p' -> Glyph `ha` Letter `ha` Lower `hv` P
- 'q' -> Glyph `ha` Letter `ha` Lower `hv` Q
- 'r' -> Glyph `ha` Letter `ha` Lower `hv` R
- 's' -> Glyph `ha` Letter `ha` Lower `hv` S
- 't' -> Glyph `ha` Letter `ha` Lower `hv` T
- 'u' -> Glyph `ha` Letter `ha` Lower `hv` U
- 'v' -> Glyph `ha` Letter `ha` Lower `hv` V
- 'w' -> Glyph `ha` Letter `ha` Lower `hv` W
- 'x' -> Glyph `ha` Letter `ha` Lower `hv` X
- 'y' -> Glyph `ha` Letter `ha` Lower `hv` Y
- 'z' -> Glyph `ha` Letter `ha` Lower `hv` Z
+ 'A' -> Glyph `ha` Letter `ha` Upper `hv` by A
+ 'B' -> Glyph `ha` Letter `ha` Upper `hv` by B
+ 'C' -> Glyph `ha` Letter `ha` Upper `hv` by C
+ 'D' -> Glyph `ha` Letter `ha` Upper `hv` by D
+ 'E' -> Glyph `ha` Letter `ha` Upper `hv` by E
+ 'F' -> Glyph `ha` Letter `ha` Upper `hv` by F
+ 'G' -> Glyph `ha` Letter `ha` Upper `hv` by G
+ 'H' -> Glyph `ha` Letter `ha` Upper `hv` by H
+ 'I' -> Glyph `ha` Letter `ha` Upper `hv` by I
+ 'J' -> Glyph `ha` Letter `ha` Upper `hv` by J
+ 'K' -> Glyph `ha` Letter `ha` Upper `hv` by K
+ 'L' -> Glyph `ha` Letter `ha` Upper `hv` by L
+ 'M' -> Glyph `ha` Letter `ha` Upper `hv` by M
+ 'N' -> Glyph `ha` Letter `ha` Upper `hv` by N
+ 'O' -> Glyph `ha` Letter `ha` Upper `hv` by O
+ 'P' -> Glyph `ha` Letter `ha` Upper `hv` by P
+ 'Q' -> Glyph `ha` Letter `ha` Upper `hv` by Q
+ 'R' -> Glyph `ha` Letter `ha` Upper `hv` by R
+ 'S' -> Glyph `ha` Letter `ha` Upper `hv` by S
+ 'T' -> Glyph `ha` Letter `ha` Upper `hv` by T
+ 'U' -> Glyph `ha` Letter `ha` Upper `hv` by U
+ 'V' -> Glyph `ha` Letter `ha` Upper `hv` by V
+ 'W' -> Glyph `ha` Letter `ha` Upper `hv` by W
+ 'X' -> Glyph `ha` Letter `ha` Upper `hv` by X
+ 'Y' -> Glyph `ha` Letter `ha` Upper `hv` by Y
+ 'Z' -> Glyph `ha` Letter `ha` Upper `hv` by Z
+ 'a' -> Glyph `ha` Letter `ha` Lower `hv` by A
+ 'b' -> Glyph `ha` Letter `ha` Lower `hv` by B
+ 'c' -> Glyph `ha` Letter `ha` Lower `hv` by C
+ 'd' -> Glyph `ha` Letter `ha` Lower `hv` by D
+ 'e' -> Glyph `ha` Letter `ha` Lower `hv` by E
+ 'f' -> Glyph `ha` Letter `ha` Lower `hv` by F
+ 'g' -> Glyph `ha` Letter `ha` Lower `hv` by G
+ 'h' -> Glyph `ha` Letter `ha` Lower `hv` by H
+ 'i' -> Glyph `ha` Letter `ha` Lower `hv` by I
+ 'j' -> Glyph `ha` Letter `ha` Lower `hv` by J
+ 'k' -> Glyph `ha` Letter `ha` Lower `hv` by K
+ 'l' -> Glyph `ha` Letter `ha` Lower `hv` by L
+ 'm' -> Glyph `ha` Letter `ha` Lower `hv` by M
+ 'n' -> Glyph `ha` Letter `ha` Lower `hv` by N
+ 'o' -> Glyph `ha` Letter `ha` Lower `hv` by O
+ 'p' -> Glyph `ha` Letter `ha` Lower `hv` by P
+ 'q' -> Glyph `ha` Letter `ha` Lower `hv` by Q
+ 'r' -> Glyph `ha` Letter `ha` Lower `hv` by R
+ 's' -> Glyph `ha` Letter `ha` Lower `hv` by S
+ 't' -> Glyph `ha` Letter `ha` Lower `hv` by T
+ 'u' -> Glyph `ha` Letter `ha` Lower `hv` by U
+ 'v' -> Glyph `ha` Letter `ha` Lower `hv` by V
+ 'w' -> Glyph `ha` Letter `ha` Lower `hv` by W
+ 'x' -> Glyph `ha` Letter `ha` Lower `hv` by X
+ 'y' -> Glyph `ha` Letter `ha` Lower `hv` by Y
+ 'z' -> Glyph `ha` Letter `ha` Lower `hv` by Z
  '0' -> Glyph `ha` Digit `hv` by Zero
  '1' -> Glyph `ha` Digit `hv` by One
  '2' -> Glyph `ha` Digit `hv` by Two
