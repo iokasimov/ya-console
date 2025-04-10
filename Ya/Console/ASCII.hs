@@ -32,13 +32,14 @@ input = getChar `yo` char_to_ascii
 output :: ASCII -> IO ASCII
 output character = putChar `hv` ascii_to_char character `yu` character
 
-type Styled = Turn Unit `S` Turn Unit `S` Turn Unit `S` Turn Unit `S` Turn Unit
+type Styled = Turn Unit `S` Turn Unit `S` Turn Unit `S` Turn Unit `S` Turn Unit `S` Turn Unit
 
-pattern Emphasize e = This (This (This (This e)))
-pattern Invisible e = This (This (This (That e)))
-pattern Underline e = This (This (That e))
-pattern Blinking e = This (That e)
-pattern Crossing e = That e
+pattern Emphasize e = This (This (This (This (This e))))
+pattern Reversing e = This (This (This (This (That e))))
+pattern Underline e = This (This (This (That e)))
+pattern Blinking e = This (This (That e))
+pattern Crossing e = This (That e)
+pattern Darkling e = That e
 
 type Turn e = e `S` e
 
@@ -51,6 +52,7 @@ styled = putStr `ha____` is @Styled `ho___`  is
  `la_` is `hu`"\ESC[24m" `la` is `hu`"\ESC[4m"
  `la_` is `hu`"\ESC[25m" `la` is `hu`"\ESC[5m"
  `la_` is `hu`"\ESC[29m" `la` is `hu`"\ESC[9m"
+ `la_` is `hu`"\ESC[22m" `la` is `hu`"\ESC[2m"
 
 caret_to_char :: Caret -> Char
 caret_to_char = is `hu` '\HT' `la` is `hu` '\LF' `la` is `hu` '\ESC' `la` is `hu` '\BS' `la` is `hu` '\DEL'
