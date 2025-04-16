@@ -219,6 +219,11 @@ instance IsString (Construction Optional ASCII) where
   worker (c : []) = Item `hv` char_to_ascii c `ha` Last `hv` Unit
   worker (c : cs) = Item `hv` char_to_ascii c `ha` Next `hv` worker cs
 
+instance IsString (Construction Optional Unit) where
+ fromString x = Construct (worker x) where
+  worker (_ : []) = Item `hv` Unit `ha` Last `hv` Unit
+  worker (_ : cs) = Item `hv` Unit `ha` Next `hv` worker cs
+
 instance IsList (Construction Optional item) where
  type Item (Construction Optional item) = item
  fromList x = Construct (worker x) where
