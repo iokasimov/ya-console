@@ -230,6 +230,13 @@ instance IsList (Construction Optional item) where
   worker (c : []) = Item c `ha` Last `hv` Unit
   worker (c : cs) = Item c `ha` Next `hv` worker cs
 
+instance IsList (List item) where
+ type Item (List item) = item
+ fromList [] = Empty @List `hv` Unit
+ fromList xs = List (worker xs) where
+  worker (c : []) = Item c `ha` Last `hv` Unit
+  worker (c : cs) = Item c `ha` Next `hv` worker cs
+
 -- instance IsList (Construction Optional item) where
  -- type Item (Construction Optional item) = item
  -- fromList x = Construct (worker x) where
