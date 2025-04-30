@@ -2,3 +2,4 @@ packages: .
   ../ya/ya.cabal
   ../ya-ascii/ya-ascii.cabal
   ../ya-world/ya-world.cabal
+  ../ya-literal/ya-literal.cabal
