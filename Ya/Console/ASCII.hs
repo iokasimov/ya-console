@@ -6,14 +6,14 @@ import Ya.World
 import Ya.Literal
 
 import "base" Data.Bool as Base (Bool (False))
-import "base" System.IO (IO, BufferMode (NoBuffering), hSetBuffering, hSetEcho, stdin, putStr, putChar, getChar)
+import "base" System.IO (BufferMode (NoBuffering), hSetBuffering, hSetEcho, stdin, putStr, putChar, getChar)
 
-clear :: IO Unit
+clear :: World Unit
 clear = do
  putStr "\ESC[2J"
  putStr "\ESC[100A"
 
-prepare :: IO Unit
+prepare :: World Unit
 prepare = do
  hSetBuffering stdin NoBuffering
  hSetEcho stdin Base.False
@@ -21,10 +21,10 @@ prepare = do
 
 -- type Buffering = Block `S` Line `S` Char
 
-input :: IO ASCII
+input :: World ASCII
 input = getChar `yo` char_to_ascii
 
-output :: ASCII -> IO ASCII
+output :: ASCII `AR` World ASCII
 output character = putChar `hv` ascii_to_char character `yu` character
 
 type Styled = Turn Unit `S` Turn Unit `S` Turn Unit `S` Turn Unit `S` Turn Unit `S` Turn Unit
