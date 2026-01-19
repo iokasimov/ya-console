@@ -21,11 +21,11 @@ prepare = do
 
 -- type Buffering = Block `S` Line `S` Char
 
-input :: World ASCII
+input :: World `T'I` Maybe ASCII
 input = getChar `yo` char_to_ascii
 
 output :: ASCII `AR` World ASCII
-output character = putChar `hv` ascii_to_char character `yu` character
+output character = putChar `hc` ascii_to_char character `yu` character
 
 type Styled = Turn Unit `S` Turn Unit `S` Turn Unit `S` Turn Unit `S` Turn Unit `S` Turn Unit
 
@@ -41,10 +41,10 @@ type Turn e = e `S` e
 pattern Off e = This e :: Turn e
 pattern On e = That e :: Turn e
 
-styled = putStr `ha____` is @Styled `ho___`  is
- `li_` is `hu`"\ESC[22m" `la` is `hu`"\ESC[1m"
- `la_` is `hu`"\ESC[27m" `la` is `hu`"\ESC[7m"
- `la_` is `hu`"\ESC[24m" `la` is `hu`"\ESC[4m"
- `la_` is `hu`"\ESC[25m" `la` is `hu`"\ESC[5m"
- `la_` is `hu`"\ESC[29m" `la` is `hu`"\ESC[9m"
- `la_` is `hu`"\ESC[22m" `la` is `hu`"\ESC[2m"
+styled = putStr `ha____` is @Styled `ho___` is
+ `hc__` is `hu` "\ESC[22m" `hs` is `hu` "\ESC[1m"
+  `hs_` is `hu` "\ESC[27m" `hs` is `hu` "\ESC[7m"
+  `hs_` is `hu` "\ESC[24m" `hs` is `hu` "\ESC[4m"
+  `hs_` is `hu` "\ESC[25m" `hs` is `hu` "\ESC[5m"
+  `hs_` is `hu` "\ESC[29m" `hs` is `hu` "\ESC[9m"
+  `hs_` is `hu` "\ESC[22m" `hs` is `hu` "\ESC[2m"
