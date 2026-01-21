@@ -42,9 +42,9 @@ pattern Off e = This e :: Turn e
 pattern On e = That e :: Turn e
 
 styled = putStr `ha____` is @Styled `ho___` is
- `hc__` is `hu` "\ESC[22m" `hs` is `hu` "\ESC[1m"
-  `hs_` is `hu` "\ESC[27m" `hs` is `hu` "\ESC[7m"
-  `hs_` is `hu` "\ESC[24m" `hs` is `hu` "\ESC[4m"
-  `hs_` is `hu` "\ESC[25m" `hs` is `hu` "\ESC[5m"
-  `hs_` is `hu` "\ESC[29m" `hs` is `hu` "\ESC[9m"
-  `hs_` is `hu` "\ESC[22m" `hs` is `hu` "\ESC[2m"
+ `hc__` is `hu` "\ESC[22m" `has` is `hu` "\ESC[1m"
+  `has_` is `hu` "\ESC[27m" `has` is `hu` "\ESC[7m"
+  `has_` is `hu` "\ESC[24m" `has` is `hu` "\ESC[4m"
+  `has_` is `hu` "\ESC[25m" `has` is `hu` "\ESC[5m"
+  `has_` is `hu` "\ESC[29m" `has` is `hu` "\ESC[9m"
+  `has_` is `hu` "\ESC[22m" `has` is `hu` "\ESC[2m"
