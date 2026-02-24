@@ -25,7 +25,7 @@ input :: World `T'I` Maybe ASCII
 input = getChar `yo` char_to_ascii
 
 output :: ASCII `AR` World ASCII
-output character = putChar `hc` ascii_to_char character `yu` character
+output character = putChar `har` ascii_to_char character `yu` character
 
 type Styled = Turn Unit `S` Turn Unit `S` Turn Unit `S` Turn Unit `S` Turn Unit `S` Turn Unit
 
@@ -42,9 +42,9 @@ pattern Off e = This e :: Turn e
 pattern On e = That e :: Turn e
 
 styled = putStr `ha____` is @Styled `ho___` is
- `hc__` is `hu` "\ESC[22m" `has` is `hu` "\ESC[1m"
-  `has_` is `hu` "\ESC[27m" `has` is `hu` "\ESC[7m"
-  `has_` is `hu` "\ESC[24m" `has` is `hu` "\ESC[4m"
-  `has_` is `hu` "\ESC[25m" `has` is `hu` "\ESC[5m"
-  `has_` is `hu` "\ESC[29m" `has` is `hu` "\ESC[9m"
-  `has_` is `hu` "\ESC[22m" `has` is `hu` "\ESC[2m"
+ `har_` is `hu` "\ESC[22m" `has` is `hu` "\ESC[1m"
+ `has_` is `hu` "\ESC[27m" `has` is `hu` "\ESC[7m"
+ `has_` is `hu` "\ESC[24m" `has` is `hu` "\ESC[4m"
+ `has_` is `hu` "\ESC[25m" `has` is `hu` "\ESC[5m"
+ `has_` is `hu` "\ESC[29m" `has` is `hu` "\ESC[9m"
+ `has_` is `hu` "\ESC[22m" `has` is `hu` "\ESC[2m"
